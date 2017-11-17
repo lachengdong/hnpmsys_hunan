@@ -1,9 +1,10 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <div class="T_layer wbimBox" node-type="BoxRoot" node-data="wbimBox">
 	<div class="bg">
 		<!-- webim对话框 -->
 		<div class="wbim_chat_box">
 			<div class="wbim_chat_mutipeople">
+
 				<div class="wbim_chat_lf">
 					<a hidefocus="true" style="cursor:pointer;"
 						class="wbim_scrolltop_n icon-arrow-up disable"
