@@ -1,15 +1,4 @@
 /IKExpression.cfg.xml
-/applicationContext.xml
 /com
-/connection.properties
-/courtJointPrisonconfig.properties
-/jyconfig.properties
-/log4j.properties
-/message.xml
-/mybatis
-/quartz
-/solutiontype.properties
+/applicationContext.xml
 /srvSeal
-/statisticalReportsql.properties
-/webmvc
-/ywgk.properties
