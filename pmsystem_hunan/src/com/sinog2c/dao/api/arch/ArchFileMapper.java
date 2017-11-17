@@ -9,7 +9,7 @@ public interface ArchFileMapper {
     int deleteByPrimaryKey(Long id);
 
     int insert(ArchFile record);
-
+ 
     int insertSelective(ArchFile record);
 
     ArchFile selectByPrimaryKey(Long id);
@@ -27,6 +27,7 @@ public interface ArchFileMapper {
     int getcountofarchfilebycondition(Map<String,Object> map);
     
     int setArchflag(Long box_id);
+
     
     Long getNextId();
 }
