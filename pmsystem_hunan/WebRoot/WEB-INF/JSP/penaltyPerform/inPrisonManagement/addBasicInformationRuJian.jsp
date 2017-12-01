@@ -30,7 +30,6 @@ String path = request.getContextPath();
 			<input id="provincecode" name="provincecode" class="mini-hidden"  value="${provincecode}"/>
 			<input id="fathermenuid" name="fathermenuid" class="mini-hidden"  value="${fathermenuid}"/>
 			
-			
 	    	<a class="mini-button" style="display:none;" id="3010864" iconCls="icon-save" plain="true" onclick="savedata('','save','doc_rjdjsp','XFZX_ZFRJDJ')">保存</a>
 	    	<a class="mini-button" style="display:none;" id="3010863" iconCls="icon-downgrade" plain="true" onclick="savedata('','yes','doc_rjdjsp','XFZX_ZFRJDJ')">提交</a>
 	    	
