@@ -32,7 +32,7 @@ String path = request.getContextPath();
 			
 			
 	    	<a class="mini-button" style="display:none;" id="11096" iconCls="icon-save" plain="true" onclick="savedata('','save','doc_zfrjdjsp','SDXF_BASE_RJDJB')">保存</a>
-	    	<a class="mini-button" style="display:none;" id="10900" iconCls="icon-downgrade" plain="true" onclick="savedata('','yes','doc_zfrjdjsp','SDXF_BASE_RJDJB')">提交</a>
+	    	<a class="mini-button" style="display:none;" id="10900" iconCls="icon-downgrade" plain="true" onclick="savedata('','yes','doc_zfrjdjsp','SDXF_BASE_RJDJB')">提 交</a>
 	    	
 	    	
 	    	<a class="mini-button" style="display:none;" id="3100483" iconCls="icon-save" plain="true" onclick="savedata('','save','','SDXF_BASE_AJXXBL')">保存</a>
@@ -99,7 +99,7 @@ String path = request.getContextPath();
 	               	   if('yes' == type){
 	               	   	doSubmitFlow(menuid,type,flowdefid,tempid);//保存大字段
 	               	   }else{
-	               		alert("操作成功！");
+	               		alert("操作成功！222");
 	               	   }
                	   }else if(text=='fysuccess'){
                	    	alert("操作成功！");

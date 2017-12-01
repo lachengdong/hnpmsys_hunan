@@ -43,4 +43,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebRoot/scripts/form/control/control_approve.js</name>
+			<type>1</type>
+			<location>C:/Users/Administrator/Desktop/control_approve.js</location>
+		</link>
+	</linkedResources>
 </projectDescription>

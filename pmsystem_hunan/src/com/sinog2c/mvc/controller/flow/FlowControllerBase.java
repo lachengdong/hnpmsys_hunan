@@ -1,7 +1,12 @@
 package com.sinog2c.mvc.controller.flow;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -509,18 +514,52 @@ public abstract class FlowControllerBase extends ControllerBase {
 		return mav;
 	}
 	/**
+	 * 大字段太大时候通过流形式接收数据
+	 * @param request
+	 * @param response
+	 * @throws IOException
+	 */
+	
+	public void getRequestParam(HttpServletRequest request,
+			HttpServletResponse response) throws IOException{
+	
+		BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));  
+        String line = null;  
+        StringBuilder sb = new StringBuilder();  
+        while ((line = br.readLine()) != null) {  
+            sb.append(line);  
+        }  
+        String parameterValues = URLDecoder.decode(sb.toString(), "UTF-8");  
+        System.out.println(parameterValues);
+       
+	}
+
+	
+	/**
 	 * 流程审批 流转操作
 	 * @return
 	 */
 	@RequestMapping(value = "/flowapprove")
 	@ResponseBody
 	public String flowApprove(HttpServletRequest request,
-			HttpServletResponse response) {
+			HttpServletResponse response)throws IOException {
 		
 		// 用户对象
 		SystemUser user = getLoginUser(request);
 		Map<String, Object> paraMap = parseParamMap(request);//参数集合
-		
+		/*if(paraMap == null){
+			BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));  
+	        String line = null;  
+	        StringBuilder sb = new StringBuilder();  
+	        while ((line = br.readLine()) != null) {  
+	            sb.append(line);  
+	        }  
+	        String parameterValues = URLDecoder.decode(sb.toString(), "UTF-8");  
+	        System.out.println(parameterValues);
+		}*/
+		System.out.println(request.getParameter("data"));
+		/*Map<String,Object> parMap = request.getParameterValues(request);*/
+		/*Enumeration<String> enumeration = request.getParameterNames();*/
 		//定义变量
 		String returnval = GkzxCommon.ZERO;
 		
